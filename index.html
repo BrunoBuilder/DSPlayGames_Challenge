@@ -82,9 +82,9 @@
           </p>
           <a href="#">Ler mais...</a>
         </div>
-
         <button><a href="#">Carregar mais</a></button>
       </section>
+
       <section>
         <h2>Jogos</h2>
         <div>
@@ -106,7 +106,36 @@
           <p>9.7</p>
         </div>
       </section>
-      <section></section>
+
+      <section>
+        <h2>Faça sua inscrição</h2>
+        <form>
+          <div>
+            <input type="text" id="name" placeholder="Nome completo" />
+            <input type="email" id="email" placeholder="Email" />
+          </div>
+
+          <div>
+            <label for="choose-plataform">Qual sua plataforma preferida?</label>
+            <div id="choose-plataform">
+              <input type="radio" name="plataform" id="choose-plataform-1" />
+              <label for="choose-plataform-1">PC</label>
+              <input type="radio" name="plataform" id="choose-plataform-2" />
+              <label for="choose-plataform-2">Xbox</label>
+              <input type="radio" name="plataform" id="choose-plataform-3" />
+              <label for="choose-plataform-3">Playstation</label>
+            </div>
+          </div>
+
+          <div>
+            <input type="checkbox" name="receive-news" id="receive-news" />
+            <label for="receive-news">Desejo receber novidades</label>
+          </div>
+
+          <input type="submit" value="Enviar" />
+          <input type="reset" value="Limpar" />
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>
