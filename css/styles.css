@@ -16,6 +16,10 @@ li {
     list-style-type: none;
 }
 
+input::placeholder {
+    color: var(--color-placeholder);
+}
+
 :root {
     --color-green: #38AF90;
     --color-white: #FFFFFF;
@@ -23,6 +27,7 @@ li {
     --color-grey-light: #F0F0F0;
     --color-pink: #DD7E92;
     --color-grey-footer: #383838;
+    --color-placeholder: #C4C4C4;
 }
 
 .header-container {
@@ -119,14 +124,12 @@ li {
     justify-content: center;
 }
 
-.news-load-more {
+.button-pink {
     background-color: var(--color-pink);
     border-radius: 8px;
-    padding: 20px 56px;
+    padding: 20px 0;
+    width: 244px;
     cursor: pointer;
-}
-
-.news-load-more a {
     font-weight: 700;
     font-size: 18px;
     color: var(--color-white);
@@ -134,7 +137,7 @@ li {
 
 #games-section {
     background-color: var(--color-grey-light);
-    padding: 40px 0px;
+    padding: 40px 0;
 }
 
 .games-section-title {
@@ -191,4 +194,90 @@ li {
     font-weight: 700;
     font-size: 36px;
     color: var(--color-green);
+}
+
+#subscription-section {
+    background-color: var(--color-white);
+    padding: 40px 10px;
+}
+
+.subscription-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-grey-text);
+    margin-bottom: 16px;
+}
+
+.form-container {
+    background-color: var(--color-grey-light);
+    border-radius: 8px;
+    padding: 32px 8px;
+    margin: 0 auto;
+    max-width: 790px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-card {
+    max-width: 642px;
+    margin: 0 auto;
+}
+
+.name-email-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-email-container input {
+    height: 50px;
+    border: solid 1px var(--color-grey-text);
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 12px 22px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.plataform-container {
+    padding: 20px 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-grey-text);
+}
+
+#choose-plataform {
+    display: flex;
+    flex-direction: column;
+}
+
+.plataform {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.receive-news-container {
+    margin: 16px 0 48px 0;
+    display: flex;
+    flex-direction: row;
+    color: var(--color-grey-text);
+}
+
+.plataform input, .receive-news-container input {
+    width: 23px;
+    height: 23px;
+    margin-right: 7px;
+}
+
+.button-reset {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-pink);
+    border-radius: 8px;
+    padding: 20px 0;
+    width: 244px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-pink);
+    margin-top: 20px;
 }
