@@ -5,7 +5,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    border: 0;
+}
+
+html, body {
+    font-size: 62.5%;
+}
+
+button {
+    border: none;
 }
 
 a {
@@ -33,6 +40,7 @@ input::placeholder {
 .header-container {
     background-color: var(--color-green);
     height: 90px;
+    width: 100%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.75);
     margin-bottom: 6px;
 }
@@ -49,29 +57,38 @@ input::placeholder {
 
 .nav-title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: var(--color-white);
 }
 
 .nav-links-container {
     display: flex;
+    align-items: center;
 }
-
+.nav-links-container img {
+    margin-left: 29px;
+}
 .nav-links {
     display: none;
 }
 
+.nav-links a {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-white);
+}
+
 #news-section {
     background-color: var(--color-white);
-    padding: 40px 10px;
+    padding: 40px 10px 40px 10px;
 }
 
 .news-section-title {
     text-align: center;
     color: var(--color-grey-text);
     font-weight: 700;
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 2.4rem;
+    margin-bottom: 8px;
 }
 
 .news-section-container {
@@ -85,14 +102,14 @@ input::placeholder {
 
 .news-title {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--color-green);
     margin-top: 4px;
 }
 
 .news-subtitle {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 1.2rem;
     color: var(--color-grey-text);
     padding: 3px 0;
     border-bottom: 1px solid var(--color-green);
@@ -137,14 +154,15 @@ input::placeholder {
 
 #games-section {
     background-color: var(--color-grey-light);
-    padding: 40px 0;
+    padding: 40px 0 10px 0;
 }
 
 .games-section-title {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: var(--color-green);
     text-align: center;
+    margin-bottom: 28px;
 }
 
 .game-card-container {
@@ -155,10 +173,10 @@ input::placeholder {
 }
 
 .game-card {
-    width: 300px;
-    height: 326px;
+    width: calc(100% - 20px);
+    max-width: 300px;
     background-color: var(--color-white);
-    margin: 28px 10px 0 10px;
+    margin: 0 10px 30px 10px;
     border-radius: 8px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     text-align: center;
@@ -167,7 +185,8 @@ input::placeholder {
 }
 
 .game-card img {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 8px 8px 0 0;
 }
 
@@ -204,7 +223,7 @@ input::placeholder {
 .subscription-title {
     text-align: center;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: var(--color-grey-text);
     margin-bottom: 16px;
 }
@@ -260,6 +279,8 @@ input::placeholder {
     margin: 16px 0 48px 0;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    font-size: 16px;
     color: var(--color-grey-text);
 }
 
@@ -284,6 +305,8 @@ input::placeholder {
 
 footer {
     background-color: var(--color-grey-footer);
+}
+.footer-container {
     height: 302px;
     display: flex;
     flex-direction: column;
@@ -293,6 +316,8 @@ footer {
     color: var(--color-white);
     font-weight: 400;
     font-size: 14px;
+    max-width: 990px;
+    margin: 0 auto;
 }
 
 footer a {
@@ -300,4 +325,195 @@ footer a {
     flex-direction: column;
     align-items: center;
     color: var(--color-white);
+}
+
+@media(min-width: 576px) {
+    .nav-title {
+        font-size: 1.9rem;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        width: 244px;
+    }
+    #news-section {
+        padding-bottom: 46px;
+    }
+    .news-section-title {
+        font-size: 2.6rem;
+        margin-bottom: 16px;
+    }
+    .news-section-container {
+        margin: 0 auto 28px auto;
+
+    }
+    .news-title {
+        font-size: 1.8rem;
+    }
+    .news-subtitle {
+        font-size: 1.3rem;
+    }
+    #games-section {
+        padding: 40px 0 16px 0;
+    }
+    .games-section-title {
+        font-size: 2.6rem;
+        margin-bottom: 36px;
+    }
+    .game-card {
+        margin: 0 12px 30px 12px;
+    }
+    #subscription-section {
+        padding-bottom: 46px;
+    }
+    .subscription-title {
+        font-size: 2.6rem;
+        margin-bottom: 22px;
+    }
+    .form-container {
+        padding-bottom: 38px;
+    }
+    .receive-news-buttons {
+        max-width: 540px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .button-reset {
+        margin-top: 0;
+    }
+}
+
+@media(min-width: 768px) {
+    .nav-title {
+        font-size: 2.0rem;
+    }
+    #news-section {
+        padding-bottom: 50px;
+    }
+    .news-section-title {
+        font-size: 2.8rem;
+        margin-bottom: 24px;
+    }
+    .news-section-container {
+        margin: 0 auto 32px auto;
+
+    }
+    .news-title {
+        font-size: 2.0rem;
+    }
+    .news-subtitle {
+        font-size: 1.4rem;
+    }
+    #games-section {
+        padding: 40px 0 24px 0;
+    }
+    .games-section-title {
+        font-size: 2.8rem;
+        margin-bottom: 50px;
+    }
+    .game-card {
+        margin: 0 13px 30px 13px;
+    }
+    #subscription-section {
+        padding-bottom: 50px;
+    }
+    .subscription-title {
+        font-size: 2.8rem;
+        margin-bottom: 28px;
+    }
+    .form-container {
+        padding-bottom: 42px;
+    }
+    .footer-container {
+        height: 190px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 992px) {
+    .nav-title {
+        font-size: 2.2rem;
+    }
+    #news-section {
+        padding-bottom: 56px;
+    }
+    .news-section-title {
+        font-size: 3.2rem;
+        margin-bottom: 32px;
+    }
+    .news-section-container {
+        margin: 0 auto 34px auto;
+
+    }
+    .news-title {
+        font-size: 2.2rem;
+    }
+    .news-subtitle {
+        font-size: 1.5rem;
+    }
+    #games-section {
+        padding: 40px 0 36px 0;
+    }
+    .games-section-title {
+        font-size: 3.2rem;
+        margin-bottom: 62px;
+    }
+    .game-card {
+        margin: 0 14px 30px 14px;
+    }
+    #subscription-section {
+        padding-bottom: 56px;
+    }
+    .subscription-title {
+        font-size: 3.2rem;
+        margin-bottom: 34px;
+    }
+    .form-container {
+        padding-bottom: 46px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .nav-title {
+        font-size: 2.4rem;
+    }
+    #news-section {
+        padding-bottom: 60px;
+    }
+    .news-section-title {
+        font-size: 3.6rem;
+        margin-bottom: 40px;
+    }
+    .news-section-container {
+        margin: 0 auto 40px auto;
+
+    }
+    .news-title {
+        font-size: 2.4rem;
+    }
+    .news-subtitle {
+        font-size: 1.6rem;
+    }
+    #games-section {
+        padding: 40px 0 40px 0;
+    }
+    .games-section-title {
+        font-size: 3.6rem;
+        margin-bottom: 74px;
+    }
+    .game-card {
+        margin: 0 15px 30px 15px;
+    }
+    #subscription-section {
+        padding-bottom: 60px;
+    }
+    .subscription-title {
+        font-size: 3.6rem;
+        margin-bottom: 40px;
+    }
+    .form-container {
+        padding-bottom: 52px;
+    }
 }
